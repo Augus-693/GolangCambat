@@ -1,0 +1,64 @@
+package main
+
+import "fmt"
+
+/**
+ * @Project GolangCambat
+ * @File    basic.go.go
+ * @Author  Augus Lee
+ * @Date    7/19/2023 4:42 PM
+ * @GoVersion go1.20.5
+ * @Version 1.0
+ */
+
+func variableDefinition() {
+	//变量定义 var
+
+	//先定义再赋值
+	var name string //方式1——先定义再赋值
+	name = "augus"
+
+	//定义同时赋值
+	var age int = 23
+
+	//定义直接赋值，使用类型推导
+	var sex = "male"
+
+	//定义直接赋值，不使用 var
+	address := "河南"
+
+	//平行赋值
+	email1, email2 := "auguslee529@gmail.com", "auguslee693@gmail.com"
+
+	fmt.Printf("name: %s, age: %d, sex: %s, address: %s, email1: %s, email2: %s\n", name, age, sex, address, email1, email2)
+}
+
+func autoIncrement() {
+	i, j := 20, 30
+	i++ //必须单独一行
+	fmt.Println("i: ", i)
+	j--
+	fmt.Println("i: ", i)
+}
+
+func point() {
+	//go语言在使用指针时，会使用内部的垃圾回收机制（gc:garbage collector），开发人员不需要手动释放内存
+	//c语言不允许返回栈上的指针，go语言可以返回栈上的指针，程序会在编译的时候确定变量的分配位置
+	//编译的时候，如果发现有必要的话，就将变量分配到堆上
+	name := "Cupit"
+	ptr := &name
+	fmt.Println("name:", name)
+	fmt.Println("name ptr:", ptr)
+
+	//使用new关键字定义
+	name2Ptr := new(string)
+	*name2Ptr = "Jack"
+	fmt.Println("name2Ptr:", *name2Ptr)
+	fmt.Println("name2Ptr ptr:", name2Ptr)
+}
+
+func main() {
+	variableDefinition() //变量定义
+	autoIncrement()      //自增变量
+	point()              //指针
+}

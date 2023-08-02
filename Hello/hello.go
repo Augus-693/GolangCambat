@@ -8,6 +8,8 @@ package main
 
 import "fmt"
 
+//这是导入一个标准包 fmt，format，一般用于格式化输出、
+
 /**
  * @Project GolangCambat
  * @File    hello.go.go
@@ -18,5 +20,8 @@ import "fmt"
  */
 
 func main() {
+	//主函数，所有的函数必须使用 func 开头
+	//一个函数的返回值，不会放在 func 前，而是放在参数后面16
+	//函数左花括号必须与函数名同行，不能写到下一行
 	fmt.Println("Hello, World!")
 }
