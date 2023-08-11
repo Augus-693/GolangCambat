@@ -12,6 +12,7 @@ import "fmt"
  */
 
 func variableDefinition() {
+	fmt.Println("演示变量定义")
 	//变量定义 var
 
 	//先定义再赋值
@@ -34,6 +35,7 @@ func variableDefinition() {
 }
 
 func autoIncrement() {
+	fmt.Println("演示自增变量")
 	i, j := 20, 30
 	i++ //必须单独一行
 	fmt.Println("i: ", i)
@@ -41,7 +43,8 @@ func autoIncrement() {
 	fmt.Println("i: ", i)
 }
 
-func point() {
+func pointer() {
+	fmt.Println("演示指针")
 	//go语言在使用指针时，会使用内部的垃圾回收机制（gc:garbage collector），开发人员不需要手动释放内存
 	//c语言不允许返回栈上的指针，go语言可以返回栈上的指针，程序会在编译的时候确定变量的分配位置
 	//编译的时候，如果发现有必要的话，就将变量分配到堆上
@@ -55,10 +58,21 @@ func point() {
 	*name2Ptr = "Jack"
 	fmt.Println("name2Ptr:", *name2Ptr)
 	fmt.Println("name2Ptr ptr:", name2Ptr)
+
+	//可以返回栈上的指针，编译器在编译程序时，会判断这段代码，将city变量分配在堆上
+	res := testPtr()
+	fmt.Println("res city :", *res, ", address : ", res)
+}
+
+// 定义一个函数，返回一个string类型的指针，go语言返回写在参数列表后面
+func testPtr() *string {
+	city := "beijing"
+	ptr := &city
+	return ptr
 }
 
 func main() {
 	variableDefinition() //变量定义
 	autoIncrement()      //自增变量
-	point()              //指针
+	pointer()            //指针
 }
