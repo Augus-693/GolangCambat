@@ -12,7 +12,7 @@ import "fmt"
 
 /**
  * @Project GolangCambat
- * @File    hello.go.go
+ * @File    hello.go
  * @Author  Augus Lee
  * @Date    2023/7/8 7:58
  * @GoVersion go1.20.5

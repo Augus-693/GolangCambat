@@ -4,7 +4,7 @@ import "fmt"
 
 /**
  * @Project GolangCambat
- * @File    basic.go.go
+ * @File    main.go
  * @Author  Augus Lee
  * @Date    7/19/2023 4:42 PM
  * @GoVersion go1.20.5
@@ -71,8 +71,36 @@ func testPtr() *string {
 	return ptr
 }
 
+func stringType() {
+	fmt.Println("演示String")
+	//1- 定义
+	name := "Augus"
+
+	//需要换行，原生输出字符串时，使用反引号``
+	usage := `./a.out <option>
+		-h helo
+		-a xxx`
+
+	fmt.Println("name : ", name)
+	fmt.Println("usage : ", usage)
+
+	//2- 长度，访问
+	l1 := len(name)
+	fmt.Println("length of name : ", l1)
+
+	//字符串遍历
+	for i := 0; i < len(name); i++ {
+		fmt.Printf("i: %d, v: %c\n", i, name[i])
+	}
+
+	//字符串拼接
+	i, j := "hello", "world"
+	fmt.Println("i + j: ", i+j)
+}
+
 func main() {
 	variableDefinition() //变量定义
 	autoIncrement()      //自增变量
 	pointer()            //指针
+	stringType()         //字符串
 }
