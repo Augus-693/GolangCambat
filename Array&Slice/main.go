@@ -5,7 +5,7 @@ import (
 )
 
 /**
- * @Project GolangCambat
+ * @Project GolangCombat
  * @File    main.go
  * @Author  Augus Lee
  * @Date    2023/8/12 16:31

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GolangCambat.iml" filepath="$PROJECT_DIR$/.idea/GolangCambat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GolangCombat.iml" filepath="$PROJECT_DIR$/.idea/GolangCombat.iml" />
     </modules>
   </component>
 </project>

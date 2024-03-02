@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /**
- * @Project GolangCambat
+ * @Project GolangCombat
  * @File    main.go
  * @Author  Augus Lee
  * @Date    2023/12/19 21:16
