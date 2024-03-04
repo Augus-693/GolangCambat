@@ -15,7 +15,7 @@ import (
  */
 
 func readFile(filename string) {
-	f1, err := os.Open("filename")
+	f1, err := os.Open(filename)
 	//defer f1.Close()
 	defer func() {
 		_ = f1.Close()
