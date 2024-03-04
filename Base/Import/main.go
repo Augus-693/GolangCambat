@@ -1,8 +1,8 @@
 package main
 
 import (
-	"GolangCombat/Import/add"
-	"GolangCombat/Import/sub"
+	"GolangCombat/Base/Import/add"
+	"GolangCombat/Base/Import/sub"
 	"fmt"
 )
 
