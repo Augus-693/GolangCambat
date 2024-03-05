@@ -21,7 +21,7 @@ type Student struct {
 func main() {
 	augus := Student{
 		name:   "Augus",
-		age:    22,
+		age:    23,
 		gender: "male",
 		score:  100,
 	}
